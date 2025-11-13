@@ -1,0 +1,118 @@
+/* ✅ Navbar */
+.main-navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(0, 186, 93, 0.9);
+  height: 60px;
+  padding: 0 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-navbar a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  margin-left: 25px;
+  padding: 10px 18px;
+  border-radius: 50px;
+  transition: all 0.3s ease-in;
+}
+
+.main-navbar a:hover {
+  background-color: rgb(90, 243, 248);
+  color: black;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* ✅ Home Section */
+.home-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 80vh;
+  background-color: rgb(30, 28, 28);
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+/* ✅ Left content */
+.home-content1 {
+  flex: 1;
+  padding: 40px;
+  border-radius: 10px;
+  color: white;
+}
+
+.home-content1 h1 {
+  font-size: 2.5rem;
+  color: rgb(224, 167, 167);
+  margin-bottom: 10px;
+}
+
+.home-content1 h2 {
+  font-size: 1.5rem;
+  color: rgb(223, 190, 190);
+  margin-bottom: 20px;
+}
+
+/* ✅ Image and button container */
+.prawn-logo1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ✅ Circular image styling */
+.prawn-img {
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.prawn-img:hover {
+  transform: scale(1.05);
+}
+
+
+.enjoy-btn {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  height: 50px;
+  width: 120px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.enjoy-btn:hover {
+  background-color: darkred;
+  transform: translateY(-3px);
+}
+
+/* ✅ Right content image */
+.home-content2 {
+  flex: 1;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+
+.side-img {
+  height: 500px;
+  width: 500px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.side-img:hover {
+  transform: scale(1.03);
+}
