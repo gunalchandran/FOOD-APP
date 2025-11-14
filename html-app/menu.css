@@ -63,3 +63,63 @@
     color: white;
     background-color: red;
 }
+#foods{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+.food-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0px 0px 100px rgba(233, 113, 113, 0.9);
+  text-align: center;
+  transition: 0.3s ease;
+}
+ .food-card img{
+  width: 200px;
+  height: 200px;
+ }
+.food-card img:hover{
+   transform: scale(1.05);
+}  
+food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Food image */
+.food-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+/* Image hover */
+.food-card img:hover {
+  transform: scale(1.07);
+}
+
+/* Food name */
+.food-card h3 {
+  font-size: 20px;
+  margin: 8px 0;
+  color: #e63946; /* nice red */
+}
+
+/* Description */
+.food-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Price */
+.food-card strong {
+  font-size: 18px;
+  color: #2a9d8f; /* green */
+}

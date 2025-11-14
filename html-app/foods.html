@@ -18,38 +18,29 @@
 
 <body>
     <div id="navbar-id"></div>
-    <div class="search-container">
-        <div class="search-input">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input type="text" placeholder="search for foods" id="search-box" />
+    <script>
+  async function loadFoods() {
+    const response = await fetch("http://localhost:5000/api/foods");
+    const foods = await response.json();
+
+    let foodContainer = document.getElementById("foods");
+    foods.forEach(food => {
+      foodContainer.innerHTML += `
+        <div class="food-card">
+          <img src="${food.image}" style="width: 50px height: 50px">
+          <h3 style="color: red;">${food.name}</h3>
+          <p>${food.description}</p>
+          <strong>₹${food.price}</strong>
         </div>
-    </div>
-    <div class="main-foodcontainer">
-        <div class="each-foodcontainer">
-            <img src="https://knowbbies.com/storage/courses/June2018/35118898_1675576969163519_65233698458435584_n-medium.jpg" alt="food1" class="food-class">
-            <h1>Prawn</h1>
-            <p>This is the best sea food you ever tasted</p>
-            <button>Order Now</button>
-        </div>
-        <div class="each-foodcontainer">
-            <img src="https://knowbbies.com/storage/courses/June2018/35118898_1675576969163519_65233698458435584_n-medium.jpg" alt="food2" class="food-class">
-             <h1>Grill Chicken</h1>
-            <p>This is the best sea food you ever tasted</p>
-            <button>Order Now</button>
-        </div>
-        <div class="each-foodcontainer">
-            <img src="https://knowbbies.com/storage/courses/June2018/35118898_1675576969163519_65233698458435584_n-medium.jpg" alt="food2" class="food-class">
-             <h1>Chicken</h1>
-            <p>This is the best sea food you ever tasted</p>
-            <button>Order Now</button>
-        </div>
-        <div class="each-foodcontainer">
-            <img src="https://knowbbies.com/storage/courses/June2018/35118898_1675576969163519_65233698458435584_n-medium.jpg" alt="food2" class="food-class">
-             <h1>Fish</h1>
-            <p>This is the best sea food you ever tasted</p>
-            <button>Order Now</button>
-        </div>
-    </div>
+      `;
+    });
+  }
+
+  loadFoods();
+</script>
+
+<div id="foods"></div>
+
 </body>
 
 </html>
